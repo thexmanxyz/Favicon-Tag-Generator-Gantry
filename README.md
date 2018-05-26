@@ -69,17 +69,17 @@ Insight of the *Favicon Tag Generator - Gantry Extension* configuration:
 
 ![1](/screenshots/backend_general.png)
 
-**Backend (2)** - *[Icons (1)](/screenshots/backend_icons1.png)*
+**Backend (2)** - *[Icons (1)](/screenshots/backend_icon1.png)*
 
-![2](/screenshots/backend_icons1.png)
+![2](/screenshots/backend_icon1.png)
 
-**Backend (3)** - *[Icons (2)](/screenshots/backend_icons2.png)*
+**Backend (3)** - *[Icons (2)](/screenshots/backend_icon2.png)*
 
-![3](/screenshots/backend_icons2.png)
+![3](/screenshots/backend_icon2.png)
 
-**Backend (4)** - *[Icons (3)](/screenshots/backend_icons3.png)*
+**Backend (4)** - *[Icons (3)](/screenshots/backend_icon3.png)*
 
-![4](/screenshots/backend_icons3.png)
+![4](/screenshots/backend_icon3.png)
 
 **Backend (5)** - *[Custom](/screenshots/backend_custom.png)*
 

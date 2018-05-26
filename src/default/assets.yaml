@@ -20,7 +20,7 @@ form:
     assets_info:
       type: separator.note
       class: alert alert-info
-      content: Favicon / Touchicon.
+      content: Favicon / Touch Icon.
 
     tabs:
       type: container.tabs

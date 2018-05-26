@@ -11,7 +11,7 @@ This project contains a Gantry Extension and improves the Favicon as well as the
 ## Download
 Choose the correct download for your target platform. Joomla Plugin System supported for the Gantry themes - Helium and Hydrogen. The latest Extension version is **v1.0.0**.
 
-Attention: This is an extension of the Gantry core functionality. Hence, the installation overrides (not overwrites) core files of the Gantry Framework. On install you don't lose anything, but changes on the framework might not be propagated until the extension is removed / uninstalled.
+**Attention:** This is an extension of the Gantry core functionality. Hence, the installation overrides (not overwrites) core files of the Gantry Framework. On install you don't lose anything, but changes on the framework might not be propagated until the extension is removed / uninstalled.
 ___
 **Default Extension:**
 [English](https://github.com/thexmanxyz/Favicon-Tag-Generator-Gantry/releases/download/v1.0.0/ccn.extension.only.EN.v1.0.0.zip)
@@ -65,7 +65,7 @@ Please be aware that the template folder path varies in dependence of the used C
 ## Showroom
 Insight of the *Favicon Tag Generator - Gantry Extension* configuration:
 
-**Backend (1)** - *[General)](/screenshots/backend_general.png)*
+**Backend (1)** - *[General](/screenshots/backend_general.png)*
 
 ![1](/screenshots/backend_general.png)
 
@@ -81,7 +81,7 @@ Insight of the *Favicon Tag Generator - Gantry Extension* configuration:
 
 ![4](/screenshots/backend_icons3.png)
 
-**Backend (5)** - *[Icons (3)](/screenshots/backend_custom.png)*
+**Backend (5)** - *[Custom](/screenshots/backend_custom.png)*
 
 ![5](/screenshots/backend_custom.png)
 

@@ -1,5 +1,5 @@
 # Favicon Tag Generator - Extension for Gantry
-This project contains a Gantry Extension and improves the Favicon as well as the Touch Icon Tag Generation and Configuration within the Gantry templating framework. **Favicon Tag Generator** encapsulates the parameterization of the most common icon sizes, allows the automatic attachment of tags and also has a option to customize meta information. Furthermore, it provides an easy, user friendly and GUI assisted configuration and integration. In the current revision the following CMSs are supported:
+This project contains a Gantry Extension and improves the Favicon as well as the Touch Icon Tag Generation and Configuration within the Gantry templating framework. **Favicon Tag Generator** encapsulates the parameterization of the most common icon sizes, allows the automatic attachment of tags and also has a option to add customized meta information. Furthermore, it provides an easy, user friendly and GUI assisted configuration and integration. In the current revision the following CMSs are supported:
 * Joomla
 * Wordpress
 * Grav
@@ -30,7 +30,11 @@ ___
 ## Manual Installation
 1. Download the **Default Package** of the *Favicon Tag Generator Extension*.
 2. Extract the files.
-3. Copy the `page_head.html.twig` to `/[GANTRY_THEME]/custom/engine/templates` and the `assets.yaml` file to `/[GANTRY_THEME]/custom/engine/blueprints/page`. Please check the list below to determine where the template folder for your CMS is located.
+3. Copy the 
+   * `page_head.html.twig` file to `/[GANTRY_THEME]/custom/engine/templates` and the 
+   * `assets.yaml` file to `/[GANTRY_THEME]/custom/engine/blueprints/page`.
+   
+   Please check the list below to determine where the template folder for your CMS is located.
 
 ## CMS Template Folder
 Please be aware that the template folder path varies in dependence of the used CMS. Here is a list of the folders for the different platforms:

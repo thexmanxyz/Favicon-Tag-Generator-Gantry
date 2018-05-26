@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="file" method="upgrade" version="3.0">
+    <name>Favicon Tag Generator - Gantry Extension (Hydrogen)</name>
+    <version>1.0.0</version>
+    <creationDate>26.05.2018</creationDate>
+    <author>Andreas Kar</author>
+    <authorEmail>andreas.kar@gmx.at</authorEmail>
+    <authorUrl></authorUrl>
+    <copyright>© 2018 Andreas Kar</copyright>
+    <license>MIT - see LICENSE.pdf</license>
+    <description>
+        <![CDATA[<div class="alert alert-info" role="alert"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <h3>Favicon Tag Generator - Extension for Gantry Framework</h3>
+        <span aria-hidden="true" class="icon-user"></span>&nbsp;<em>Andreas Kar (andreas.kar@gmx.at)</em>
+        <p><b>NOTE</b>:&nbsp;This extension is installed for the Gantry Hydrogen.<br />If you want to install the atom on a different Gantry template, you must manually copy the two files <code>assets.yaml</code> to <code>/templates/[NOME-TEMPLATE]/custom/engine/templatescustom/engine/blueprints/page</code> and <code>page_head.html.twig</code> to <code>/templates/[TEMPLATE]/custom/engine/templates</code>.</p></div>]]>
+    </description>
+    <fileset>
+        <files folder="particles" target="templates/g5_hydrogen/custom/engine/blueprints/page">
+            <filename>assets.yaml</filename>
+        </files>
+        <files folder="particles" target="templates/g5_hydrogen/custom/engine/templates">
+            <filename>page_head.html.twig</filename>
+        </files>
+    </fileset>
+</extension>

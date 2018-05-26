@@ -1,0 +1,171 @@
+{#######################################################}
+{#                                                     #}
+{#   Favicon Tag Generator - Extension for Gantry      #}
+{#                                                     #}
+{#   Purpose: This project improves the Favicon as     #}
+{#            well as the Touch Icon Tag Generation    #}
+{#            and Configuration within the Gantry      #}
+{#            templating framework.                    #}
+{#                                                     #}
+{#   Author: Andreas Kar (thex) <andreas.kar@gmx.at>   #}
+{#                                                     #}
+{#######################################################}
+
+{%- do gantry.debugger.assets() -%}
+{%- do gantry.theme.loadAtoms() -%}
+
+{% assets with { priority: 10 } %}
+    {% block head_stylesheets -%}
+        <link rel="stylesheet" href="gantry-assets://css/font-awesome.min.css" type="text/css"/>
+        <link rel="stylesheet" href="gantry-engine://css-compiled/nucleus.css" type="text/css"/>
+        {% for scss in gantry.theme.configuration.css.persistent|default(gantry.theme.configuration.css.files) %}
+        <link rel="stylesheet" href="{{ scss }}.scss" type="text/css"/>
+        {%- endfor %}
+    {% endblock -%}
+
+    {% block head_platform %}{% endblock %}
+
+    {% block head_overrides -%}
+        {% for scss in gantry.theme.configuration.css.overrides %}
+        <link rel="stylesheet" href="{{ scss }}.scss" type="text/css"/>
+        {%- endfor %}
+    {% endblock -%}
+{% endassets -%}
+
+<head>
+    {% block head_meta %}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        {% if gantry.config.page.head.meta -%}
+            {% for attributes in gantry.config.page.head.meta -%}
+                {%- for key, value in attributes %}
+                    {% if key starts with 'og:' %}
+                    <meta property="{{ key|e }}" content="{{ value|e }}" />
+                    {% else %}
+                    <meta name="{{ key|e }}" content="{{ value|e }}" />
+                    {% endif %}
+                {% endfor -%}
+            {%- endfor -%}
+        {%- endif -%}
+
+        {#% if gantry.config.page.assets.favicon %}
+        {#<link rel="icon" type="image/x-icon" href="{{ url(gantry.config.page.assets.favicon) }}" />#}
+        {#% endif %#}
+
+        {#% if gantry.config.page.assets.touchicon %#}
+        {#<link rel="apple-touch-icon" sizes="180x180" href="{{ url(gantry.config.page.assets.touchicon) }}">#}
+        {#<link rel="icon" sizes="192x192" href="{{ url(gantry.config.page.assets.touchicon) }}">#}
+        {#% endif %#}
+        
+        {%- set assets = gantry.config.page.assets -%}
+        {%- set general = assets.general -%}
+        {%- set base = general.base_path -%}
+        {%- set base = base ~ ((base ends with '/') ? '' : '/') -%}
+        {%- set base = base ~ general.file_id -%}
+
+        {%- set tileLink = base ~ '-' ~ '144.png' -%}
+        {%- if general.mode == 'manual' or (general.mode == 'semi-auto' and assets.icon144tile.image is not empty) -%}
+            {%- set tileLink = assets.icon144tile.image -%}
+        {%- endif -%}
+        
+        {%- if general.mode != 'custom' -%}
+            {{- _self.renderLinkTagMode(general.mode, assets.icon.enabled, assets.icon.rel, "image/x-icon", "", "", general.base_path, general.file_id, assets.icon.image) -}}
+            {{- _self.renderLinkTagMode(general.mode, assets.icon57.enabled, assets.icon57.rel, "", "57", "57x75", general.base_path, general.file_id, assets.icon57.image) -}}
+            {{- _self.renderLinkTagMode(general.mode, assets.icon60.enabled, assets.icon60.rel, "", "60", "60x60", general.base_path, general.file_id, assets.icon60.image) -}}
+            {{- _self.renderLinkTagMode(general.mode, assets.icon72.enabled, assets.icon72.rel, "", "72", "72x72", general.base_path, general.file_id, assets.icon72.image) -}}
+            {{- _self.renderLinkTagMode(general.mode, assets.icon76.enabled, assets.icon76.rel, "", "76", "76x76", general.base_path, general.file_id, assets.icon76.image) -}}
+            {{- _self.renderLinkTagMode(general.mode, assets.icon114.enabled, assets.icon114.rel, "", "114", "114x114", general.base_path, general.file_id, assets.icon114.image) -}}
+            {{- _self.renderLinkTagMode(general.mode, assets.icon120.enabled, assets.icon120.rel, "", "120", "120x120", general.base_path, general.file_id, assets.icon120.image) -}}
+            {{- _self.renderLinkTagMode(general.mode, assets.icon144.enabled, assets.icon144.rel, "", "144", "144x144", general.base_path, general.file_id, assets.icon144.image) -}}
+            {{- _self.renderLinkTagMode(general.mode, assets.icon152.enabled, assets.icon152.rel, "", "152", "152x152", general.base_path, general.file_id, assets.icon152.image) -}}
+            {{- _self.renderLinkTagMode(general.mode, assets.icon180.enabled, assets.icon180.rel, "", "180", "180x180", general.base_path, general.file_id, assets.icon180.image) -}}
+
+            {{- _self.renderLinkTagMode(general.mode, assets.icon16.enabled, assets.icon16.rel, "image/png", "16", "16x16", general.base_path, general.file_id, assets.icon16.image) -}}
+            {{- _self.renderLinkTagMode(general.mode, assets.icon32.enabled, assets.icon32.rel, "image/png", "32", "32x32", general.base_path, general.file_id, assets.icon32.image) -}}
+            {{- _self.renderLinkTagMode(general.mode, assets.icon96.enabled, assets.icon96.rel, "image/png", "96", "96x96", general.base_path, general.file_id, assets.icon96.image) -}}
+            {{- _self.renderLinkTagMode(general.mode, assets.icon192.enabled, assets.icon192.rel, "image/png", "192", "192x192", general.base_path, general.file_id, assets.icon192.image) -}}
+            {{- _self.renderLinkTagMode(general.mode, assets.manifest.enabled, assets.manifest.rel, "", "", "", general.base_path, "manifest", assets.manifest.path) -}}
+
+            {{- _self.renderMetaTag(assets.icon144tile.enabled, "msapplication-TileImager", url(tileLink)) -}}
+            {{- _self.renderMetaTag(assets.tilecolor.enabled, "msapplication-TileColor", assets.tilecolor.color) -}}
+            {{- _self.renderMetaTag(assets.themecolor.enabled, "theme-color", assets.themecolor.color) -}}
+        {%- endif -%}
+
+        {%- for cTag in assets.custom.tags -%}
+            {{- _self.renderLinkTag(cTag.enabled, cTag.rel, cTag.type, cTag.sizes, cTag.image) -}}
+        {%- endfor -%}
+    {% endblock %}
+
+    {%- block head_title -%}
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Title</title>
+    {%- endblock %}
+
+    {% block head_application -%}
+        {{ gantry.styles('head')|join("\n")|raw }}
+        {{ gantry.scripts('head')|join("\n")|raw }}
+    {%- endblock %}
+
+    {% block head_ie_stylesheets -%}
+        <!--[if (gte IE 8)&(lte IE 9)]>
+        <script type="text/javascript" src="{{ url('gantry-assets://js/html5shiv-printshiv.min.js') }}"></script>
+        <link rel="stylesheet" href="{{ url('gantry-engine://css/nucleus-ie9.css') }}" type="text/css"/>
+        <script type="text/javascript" src="{{ url('gantry-assets://js/matchmedia.polyfill.js') }}"></script>
+        <![endif]-->
+    {% endblock -%}
+
+    {% block head %}{% endblock %}
+    {% block head_custom %}
+        {% if gantry.config.page.head.head_bottom %}
+        {{ gantry.config.page.head.head_bottom|raw }}
+        {% endif %}
+    {% endblock %}
+</head>
+
+{%- macro renderLinkTagMode(mode, enabled, rel, type, size, sizes, basePath, fileId, hrefC) -%}
+    {%- import _self as SELF -%}
+    {%- if enabled -%}
+        {%- set href = basePath -%}
+        {%- set href = href ~ ((href ends with '/') ? '' : '/') -%}
+        {%- set href = href ~ fileId -%}
+        {%- if fileId != 'manifest' -%}
+            {%- set href = href ~ ((size is not empty) ? '-' ~ size ~ '.png' : '.ico') -%}
+        {%- else -%}
+            {%- set href = href ~ ".json" -%}
+        {%- endif -%}
+        {%- if mode == 'manual' or (mode == 'semi-auto' and hrefC is not empty) -%}
+            {%- set href = hrefC -%}
+        {%- endif -%}
+        {%- if href is not empty -%}
+            {{ SELF.renderLinkTag(enabled, rel, type, sizes, href) }}
+        {%- endif -%}
+    {%- endif -%}
+{%- endmacro -%}
+
+{%- macro renderLinkTag(enabled, rel, type, sizes, href) -%}
+    {%- if enabled -%}
+        {%- set linkTag = '<link rel="' ~ rel ~ '"' -%}
+        {%- if type is not empty -%}
+            {%- set linkTag = linkTag ~ ' type="' ~ type ~ '"' -%}
+        {%- endif -%}
+        {%- if sizes is not empty -%}
+            {%- set linkTag = linkTag ~ ' sizes="' ~ sizes ~ '"' -%}
+        {%- endif -%}
+        {%- if href is not empty -%}
+            {%- set linkTag = linkTag ~ ' href="' ~ url(href) ~ '"' -%}
+        {%- endif -%}
+        {%- set linkTag = linkTag ~ '>' -%}
+        {{- linkTag|raw -}}
+    {% endif %}
+{%- endmacro -%}
+
+{%- macro renderMetaTag(enabled, name, content) -%}
+    {%- if enabled -%}
+        {%- set linkTag = '<meta name="' ~ name ~ '"' -%}
+        {%- if content is not empty -%}
+            {%- set linkTag = linkTag ~ ' content="' ~ content ~ '"' -%}
+        {%- endif -%}
+        {%- set linkTag = linkTag ~ '>' -%}
+        {{- linkTag|raw -}}
+    {% endif %}
+{%- endmacro -%}

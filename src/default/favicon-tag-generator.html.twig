@@ -26,8 +26,6 @@
         
 {%- block head -%}
     {{ parent() }}
-    <link rel="apple-touch-icon" sizes="180x180" href="/customer/leitl-fitness/joomla/images/favicon/favicon-180.png">
-    <link href="/customer/leitl-fitness/joomla/media/mod_vt_nivo_slider/themes/dark/dark.css?23423" rel="stylesheet" />
     {%- if general.mode != 'custom' -%}
         {{- _self.renderLinkTagMode(general.mode, particle.icon.enabled, particle.icon.rel, "image/x-icon", "", "", general.base_path, general.file_id, particle.icon.image) -}}
         {{- _self.renderLinkTagMode(general.mode, particle.icon57.enabled, particle.icon57.rel, "", "57", "57x75", general.base_path, general.file_id, particle.icon57.image) -}}
@@ -78,12 +76,12 @@
 
 {%- macro renderLinkTag(enabled, rel, type, sizes, href) -%}
     {%- if enabled -%}
-        {%- set linkTag = '<link rel="' ~ rel ~ '"' -%}
+        {%- set linkTag = '<link rel="' ~ rel|e ~ '"' -%}
         {%- if type is not empty -%}
-            {%- set linkTag = linkTag ~ ' type="' ~ type ~ '"' -%}
+            {%- set linkTag = linkTag ~ ' type="' ~ type|e ~ '"' -%}
         {%- endif -%}
         {%- if sizes is not empty -%}
-            {%- set linkTag = linkTag ~ ' sizes="' ~ sizes ~ '"' -%}
+            {%- set linkTag = linkTag ~ ' sizes="' ~ sizes|e ~ '"' -%}
         {%- endif -%}
         {%- if href is not empty -%}
             {%- set linkTag = linkTag ~ ' href="' ~ url(href) ~ '"' -%}
@@ -95,9 +93,9 @@
 
 {%- macro renderMetaTag(enabled, name, content) -%}
     {%- if enabled -%}
-        {%- set linkTag = '<meta name="' ~ name ~ '"' -%}
+        {%- set linkTag = '<meta name="' ~ name|e ~ '"' -%}
         {%- if content is not empty -%}
-            {%- set linkTag = linkTag ~ ' content="' ~ content ~ '"' -%}
+            {%- set linkTag = linkTag ~ ' content="' ~ content|e ~ '"' -%}
         {%- endif -%}
         {%- set linkTag = linkTag ~ '>' -%}
         {{- linkTag|raw -}}

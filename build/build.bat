@@ -14,7 +14,7 @@ REM #######################################################
 
 REM --- Script Variables ---
 set remove_folders=1
-set log_files=1
+set log_files=0
 set title_hr=-------------------------------------
 
 REM --- Packaging Variables ---

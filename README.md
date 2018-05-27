@@ -16,7 +16,7 @@ ___
 **Default Extension:**
 [English](https://github.com/thexmanxyz/Favicon-Tag-Generator-Gantry/releases/download/v1.0.1/ftg.extension.only.EN.v1.0.1.zip) / [German](https://github.com/thexmanxyz/Favicon-Tag-Generator-Gantry/releases/download/v1.0.1/ftg.extension.only.DE.v1.0.1.zip)
 
-**Legacy Atom - Gantry <5.3.2:**
+**Legacy Extension - Gantry <5.3.2:**
 [English](https://github.com/thexmanxyz/Favicon-Tag-Generator-Gantry/releases/download/v1.0.1/ftg.extension.only.legacy.EN.v1.0.1.zip) / [German](https://github.com/thexmanxyz/Favicon-Tag-Generator-Gantry/releases/download/v1.0.1/ftg.extension.only.legacy.DE.v1.0.1.zip)
 
 **Joomla Plugin - Hydrogen:**

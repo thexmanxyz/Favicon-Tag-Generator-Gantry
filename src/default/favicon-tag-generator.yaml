@@ -32,7 +32,7 @@ form:
                 general.info:
                   type: separator.note
                   class: alert alert-info
-                  content: In Automatic or Semi-Automatic Mode please define the Image Identifier  and name your files appropriate e.g.: favicon.icon, favicon-16.png, favicon-32.png. In all automaic modes images are limitied to the files types .png and .ico.
+                  content: In Automatic or Semi-Automatic Mode please define the Image Identifier and name your files appropriate e.g.: favicon.icon, favicon-16.png, favicon-32.png. In all automaic modes images are limitied to the files types .png and .ico.
 
                 general.mode:
                   type: select.select
@@ -68,7 +68,7 @@ form:
 
                 icon.enabled:
                   type: input.checkbox
-                  label: Enable
+                  label: Enabled
                   description: Defines whether the icon link tag (icon) should be generated.
                   default: 1
 

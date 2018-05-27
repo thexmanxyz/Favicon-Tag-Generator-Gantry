@@ -17,10 +17,10 @@ type: global
 
 form:
   fields:
-    assets_info:
+    assets_info1:
       type: separator.note
       class: alert alert-info
-      content: Favicon / Touch Icon.
+      content: Favicon / Touch Icon
 
     tabs:
       type: container.tabs
@@ -68,7 +68,7 @@ form:
 
                 icon.enabled:
                   type: input.checkbox
-                  label: Enable
+                  label: Enabled
                   description: Defines whether the icon link tag (icon) should be generated.
                   default: 1
 
@@ -580,6 +580,11 @@ form:
 #      label: Touch Icon
 #      description: A PNG only image that will be used as icon for Touch Devices. Recommended 180x180 or 192x192.
 #      filter: '.png$'
+
+    assets_info2:
+      type: separator.note
+      class: alert alert-info
+      content: Custom Scripts
 
     css:
       type: collection.list

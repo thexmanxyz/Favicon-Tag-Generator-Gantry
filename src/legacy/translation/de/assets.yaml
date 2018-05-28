@@ -84,6 +84,7 @@ form:
           options:
               icon: Bild (icon)
               apple-touch-icon: Apple Touch Icon (apple-touch-icon)
+              apple-touch-icon-precomposed: Apple Touch Icon Precomposed (apple-touch-icon-precomposed)
 
         icon16.info:
           type: separator.note
@@ -111,6 +112,7 @@ form:
           options:
               icon: Bild (icon)
               apple-touch-icon: Apple Touch Icon (apple-touch-icon)
+              apple-touch-icon-precomposed: Apple Touch Icon Precomposed (apple-touch-icon-precomposed)
 
         icon32.info:
           type: separator.note
@@ -138,6 +140,63 @@ form:
           options:
               icon: Bild (icon)
               apple-touch-icon: Apple Touch Icon (apple-touch-icon)
+              apple-touch-icon-precomposed: Apple Touch Icon Precomposed (apple-touch-icon-precomposed)
+
+        icon36.info:
+          type: separator.note
+          class: alert alert-info
+          content: Favicon - 36x36px
+
+        icon36.enabled:
+          type: input.checkbox
+          label: Aktiviert
+          description: Legt fest ob der Link Tag (36x36) generiert werden soll.
+          default: 1
+
+        icon36.image:
+          type: input.imagepicker
+          label: Bild (.png)
+          description: Wählen Sie ein Bild für den Link Tag.
+          filter: '.png$'
+
+        icon36.rel:
+          type: select.select
+          label: Rel Attribut
+          description: Setzen Sie den Wert für das 'rel=' Attribut des Link Tags.
+          placeholder: 'Auswählen...'
+          default: icon
+          options:
+              icon: Bild (icon)
+              apple-touch-icon: Apple Touch Icon (apple-touch-icon)
+              apple-touch-icon-precomposed: Apple Touch Icon Precomposed (apple-touch-icon-precomposed)
+
+        icon48.info:
+          type: separator.note
+          class: alert alert-info
+          content: Favicon - 48x48px
+
+        icon48.enabled:
+          type: input.checkbox
+          label: Aktiviert
+          description: Legt fest ob der Link Tag (48x48) generiert werden soll.
+          default: 1
+
+        icon48.image:
+          type: input.imagepicker
+          label: Bild (.png)
+          description: Wählen Sie ein Bild für den Link Tag.
+          filter: '.png$'
+
+        icon48.rel:
+          type: select.select
+          label: Rel Attribut
+          description: Setzen Sie den Wert für das 'rel=' Attribut des Link Tags.
+          placeholder: 'Auswählen...'
+          default: icon
+          options:
+              icon: Bild (icon)
+              apple-touch-icon: Apple Touch Icon (apple-touch-icon)
+              apple-touch-icon-precomposed: Apple Touch Icon Precomposed (apple-touch-icon-precomposed)
 
         icon57.info:
           type: separator.note
@@ -165,6 +224,7 @@ form:
           options:
               icon: Bild (icon)
               apple-touch-icon: Apple Touch Icon (apple-touch-icon)
+              apple-touch-icon-precomposed: Apple Touch Icon Precomposed (apple-touch-icon-precomposed)
 
         icon60.info:
           type: separator.note
@@ -192,6 +252,7 @@ form:
           options:
               icon: Bild (icon)
               apple-touch-icon: Apple Touch Icon (apple-touch-icon)
+              apple-touch-icon-precomposed: Apple Touch Icon Precomposed (apple-touch-icon-precomposed)
 
         icon72.info:
           type: separator.note
@@ -219,6 +280,7 @@ form:
           options:
               icon: Bild (icon)
               apple-touch-icon: Apple Touch Icon (apple-touch-icon)
+              apple-touch-icon-precomposed: Apple Touch Icon Precomposed (apple-touch-icon-precomposed)
 
     set_icons2:
       type: container.set
@@ -250,6 +312,7 @@ form:
           options:
               icon: Bild (icon)
               apple-touch-icon: Apple Touch Icon (apple-touch-icon)
+              apple-touch-icon-precomposed: Apple Touch Icon Precomposed (apple-touch-icon-precomposed)
 
         icon96.info:
           type: separator.note
@@ -277,6 +340,7 @@ form:
           options:
               icon: Bild (icon)
               apple-touch-icon: Apple Touch Icon (apple-touch-icon)
+              apple-touch-icon-precomposed: Apple Touch Icon Precomposed (apple-touch-icon-precomposed)
 
         icon114.info:
           type: separator.note
@@ -304,6 +368,7 @@ form:
           options:
               icon: Bild (icon)
               apple-touch-icon: Apple Touch Icon (apple-touch-icon)
+              apple-touch-icon-precomposed: Apple Touch Icon Precomposed (apple-touch-icon-precomposed)
 
         icon120.info:
           type: separator.note
@@ -331,6 +396,35 @@ form:
           options:
               icon: Bild (icon)
               apple-touch-icon: Apple Touch Icon (apple-touch-icon)
+              apple-touch-icon-precomposed: Apple Touch Icon Precomposed (apple-touch-icon-precomposed)
+
+        icon128.info:
+          type: separator.note
+          class: alert alert-info
+          content: Favicon - 128x128px
+
+        icon128.enabled:
+          type: input.checkbox
+          label: Aktiviert
+          description: Legt fest ob der Link Tag (128x128) generiert werden soll.
+          default: 1
+
+        icon128.image:
+          type: input.imagepicker
+          label: Bild (.png)
+          description: Wählen Sie ein Bild für den Link Tag.
+          filter: '.png$'
+
+        icon128.rel:
+          type: select.select
+          label: Rel Attribut
+          description: Setzen Sie den Wert für das 'rel=' Attribut des Link Tags.
+          placeholder: 'Auswählen...'
+          default: icon
+          options:
+              icon: Bild (icon)
+              apple-touch-icon: Apple Touch Icon (apple-touch-icon)
+              apple-touch-icon-precomposed: Apple Touch Icon Precomposed (apple-touch-icon-precomposed)
 
         icon144.info:
           type: separator.note
@@ -358,6 +452,7 @@ form:
           options:
               icon: Bild (icon)
               apple-touch-icon: Apple Touch Icon (apple-touch-icon)
+              apple-touch-icon-precomposed: Apple Touch Icon Precomposed (apple-touch-icon-precomposed)
 
         icon144tile.info:
           type: separator.note
@@ -406,6 +501,7 @@ form:
           options:
               icon: Bild (icon)
               apple-touch-icon: Apple Touch Icon (apple-touch-icon)
+              apple-touch-icon-precomposed: Apple Touch Icon Precomposed (apple-touch-icon-precomposed)
 
         icon180.info:
           type: separator.note
@@ -433,6 +529,7 @@ form:
           options:
               icon: Bild (icon)
               apple-touch-icon: Apple Touch Icon (apple-touch-icon)
+              apple-touch-icon-precomposed: Apple Touch Icon Precomposed (apple-touch-icon-precomposed)
 
         icon192.info:
           type: separator.note
@@ -460,6 +557,35 @@ form:
           options:
               icon: Bild (icon)
               apple-touch-icon: Apple Touch Icon (apple-touch-icon)
+              apple-touch-icon-precomposed: Apple Touch Icon Precomposed (apple-touch-icon-precomposed)
+
+        icon196.info:
+          type: separator.note
+          class: alert alert-info
+          content: Favicon - 196x196px
+
+        icon196.enabled:
+          type: input.checkbox
+          label: Aktiviert
+          description: Legt fest ob der Link Tag (196x196) generiert werden soll.
+          default: 1
+
+        icon196.image:
+          type: input.imagepicker
+          label: Bild (.png)
+          description: Wählen Sie ein Bild für den Link Tag.
+          filter: '.png$'
+
+        icon196.rel:
+          type: select.select
+          label: Rel Attribut
+          description: Setzen Sie den Wert für das 'rel=' Attribut des Link Tags.
+          placeholder: 'Auswählen...'
+          default: icon
+          options:
+              icon: Bild (icon)
+              apple-touch-icon: Apple Touch Icon (apple-touch-icon)
+              apple-touch-icon-precomposed: Apple Touch Icon Precomposed (apple-touch-icon-precomposed)
 
         manifest.info:
           type: separator.note
@@ -522,6 +648,61 @@ form:
           description: Wählen Sie den Farbcode für den Meta Tag.
           default: "#ffffff"
 
+    set_icons4:
+      type: container.set
+      label: Icons (4)
+      fields:
+        icon70square.info:
+          type: separator.note
+          class: alert alert-info
+          content: Favicon - 70x70px - MS Square
+
+        icon70square.enabled:
+          type: input.checkbox
+          label: Aktiviert
+          description: Legt fest ob der Link Tag (70x70px) generiert werden soll.
+          default: 1
+
+        icon70square.image:
+          type: input.imagepicker
+          label: Bild (.png)
+          description: Wählen Sie ein Bild für den Link Tag.
+          filter: '.png$'
+
+        icon150square.info:
+          type: separator.note
+          class: alert alert-info
+          content: Favicon - 150x150px - MS Square
+
+        icon150square.enabled:
+          type: input.checkbox
+          label: Aktiviert
+          description: Legt fest ob der Link Tag (150x150px) generiert werden soll.
+          default: 1
+
+        icon150square.image:
+          type: input.imagepicker
+          label: Bild (.png)
+          description: Wählen Sie ein Bild für den Link Tag.
+          filter: '.png$'
+
+        icon310square.info:
+          type: separator.note
+          class: alert alert-info
+          content: Favicon - 310x310px - MS Square
+
+        icon310square.enabled:
+          type: input.checkbox
+          label: Aktiviert
+          description: Legt fest ob der Link Tag (310x310px) generiert werden soll.
+          default: 1
+
+        icon310square.image:
+          type: input.imagepicker
+          label: Bild (.png)
+          description: Wählen Sie ein Bild für den Link Tag.
+          filter: '.png$'
+
     set_custom:
       type: container.set
       label: Benutzerdefiniert
@@ -568,6 +749,7 @@ form:
               options:
                   icon: Bild (icon)
                   apple-touch-icon: Apple Touch Icon (apple-touch-icon)
+                  apple-touch-icon-precomposed: Apple Touch Icon Precomposed (apple-touch-icon-precomposed)
 
 #    favicon:
 #      type: input.imagepicker

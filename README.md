@@ -62,7 +62,11 @@ Please be aware that the template folder path varies in dependence of the used C
   * Automatic, Semi-Automatic, Manual, Custom Only
 * Favicon and Touch Icon Tag Generation for many known devices
   * e.g. 16px, 32px, 36px, 48px, 57px, 60px, 72px, 76px, 96px, 114px, 120px, 144px, 150px, 152px, 180px, 192px, 196px, 300px
-  * Manifest File, Tile Color, Theme Color
+  * Manifest File
+  * Tile Color
+  * Theme Color
+  * MS Square
+  * MS TileImage
  * Custom Tag Generation for new appearing Icon Sizes
 
 ## Showroom

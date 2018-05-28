@@ -89,9 +89,7 @@
 {%- macro renderIconTags(assets) -%}
     {%- import _self as SELF -%}
     {%- set general = assets.general -%}
-    {%- set base = general.base_path -%}
-    {%- set base = base ~ ((base ends with '/') ? '' : '/') -%}
-    {%- set base = base ~ general.file_id -%}
+    {%- set base = general.base_path ~ ((general.base_path ends with '/') ? '' : '/') ~ general.file_id -%}
 
     {%- set tileLink = base ~ '-' ~ '144.png' -%}
     {%- if general.mode == 'manual' or (general.mode == 'semi-auto' and assets.icon144tile.image is not empty) -%}
@@ -99,23 +97,23 @@
     {%- endif -%}
     
     {%- if general.mode != 'custom' -%}
-        {{- SELF.renderLinkTagMode(general.mode, assets.icon.enabled, assets.icon.rel, "image/x-icon", "", "", general.base_path, general.file_id, assets.icon.image) -}}
-        {{- SELF.renderLinkTagMode(general.mode, assets.icon57.enabled, assets.icon57.rel, "", "57", "57x75", general.base_path, general.file_id, assets.icon57.image) -}}
-        {{- SELF.renderLinkTagMode(general.mode, assets.icon60.enabled, assets.icon60.rel, "", "60", "60x60", general.base_path, general.file_id, assets.icon60.image) -}}
-        {{- SELF.renderLinkTagMode(general.mode, assets.icon72.enabled, assets.icon72.rel, "", "72", "72x72", general.base_path, general.file_id, assets.icon72.image) -}}
-        {{- SELF.renderLinkTagMode(general.mode, assets.icon76.enabled, assets.icon76.rel, "", "76", "76x76", general.base_path, general.file_id, assets.icon76.image) -}}
-        {{- SELF.renderLinkTagMode(general.mode, assets.icon114.enabled, assets.icon114.rel, "", "114", "114x114", general.base_path, general.file_id, assets.icon114.image) -}}
-        {{- SELF.renderLinkTagMode(general.mode, assets.icon120.enabled, assets.icon120.rel, "", "120", "120x120", general.base_path, general.file_id, assets.icon120.image) -}}
-        {{- SELF.renderLinkTagMode(general.mode, assets.icon144.enabled, assets.icon144.rel, "", "144", "144x144", general.base_path, general.file_id, assets.icon144.image) -}}
-        {{- SELF.renderLinkTagMode(general.mode, assets.icon152.enabled, assets.icon152.rel, "", "152", "152x152", general.base_path, general.file_id, assets.icon152.image) -}}
-        {{- SELF.renderLinkTagMode(general.mode, assets.icon180.enabled, assets.icon180.rel, "", "180", "180x180", general.base_path, general.file_id, assets.icon180.image) -}}
-
-        {{- SELF.renderLinkTagMode(general.mode, assets.icon16.enabled, assets.icon16.rel, "image/png", "16", "16x16", general.base_path, general.file_id, assets.icon16.image) -}}
-        {{- SELF.renderLinkTagMode(general.mode, assets.icon32.enabled, assets.icon32.rel, "image/png", "32", "32x32", general.base_path, general.file_id, assets.icon32.image) -}}
-        {{- SELF.renderLinkTagMode(general.mode, assets.icon96.enabled, assets.icon96.rel, "image/png", "96", "96x96", general.base_path, general.file_id, assets.icon96.image) -}}
-        {{- SELF.renderLinkTagMode(general.mode, assets.icon192.enabled, assets.icon192.rel, "image/png", "192", "192x192", general.base_path, general.file_id, assets.icon192.image) -}}
-        {{- SELF.renderLinkTagMode(general.mode, assets.manifest.enabled, assets.manifest.rel, "", "", "", general.base_path, "manifest", assets.manifest.path) -}}
-
+        {{- SELF.renderLinkTagMode(general, assets.icon, "", "image/x-icon", "") -}}
+        {{- SELF.renderLinkTagMode(general, assets.icon57, "57", "", "") -}}
+        {{- SELF.renderLinkTagMode(general, assets.icon60, "60", "", "") -}}
+        {{- SELF.renderLinkTagMode(general, assets.icon72, "72", "", "") -}}
+        {{- SELF.renderLinkTagMode(general, assets.icon76, "76", "", "") -}}
+        {{- SELF.renderLinkTagMode(general, assets.icon114, "114", "", "") -}}
+        {{- SELF.renderLinkTagMode(general, assets.icon120, "120", "", "") -}}
+        {{- SELF.renderLinkTagMode(general, assets.icon144, "144", "", "") -}}
+        {{- SELF.renderLinkTagMode(general, assets.icon152, "152", "", "") -}}
+        {{- SELF.renderLinkTagMode(general, assets.icon180, "180", "", "") -}}
+        
+        {{- SELF.renderLinkTagMode(general, assets.icon16, "16", "image/png", "") -}}
+        {{- SELF.renderLinkTagMode(general, assets.icon32, "32", "image/png", "") -}}
+        {{- SELF.renderLinkTagMode(general, assets.icon96, "96", "image/png", "") -}}
+        {{- SELF.renderLinkTagMode(general, assets.icon192, "192", "image/png", "") }}
+        {{- SELF.renderLinkTagMode(general, assets.manifest, "", "", "manifest") -}}
+        
         {{- SELF.renderMetaTag(assets.icon144tile.enabled, "msapplication-TileImager", url(tileLink)) -}}
         {{- SELF.renderMetaTag(assets.tilecolor.enabled, "msapplication-TileColor", assets.tilecolor.color) -}}
         {{- SELF.renderMetaTag(assets.themecolor.enabled, "theme-color", assets.themecolor.color) -}}
@@ -126,22 +124,23 @@
     {%- endfor -%}
 {%- endmacro -%}
 
-{%- macro renderLinkTagMode(mode, enabled, rel, type, size, sizes, basePath, fileId, hrefC) -%}
+{%- macro renderLinkTagMode(general, icon, size, type, fileId) -%}
     {%- import _self as SELF -%}
-    {%- if enabled -%}
-        {%- set href = basePath -%}
-        {%- set href = href ~ ((href ends with '/') ? '' : '/') -%}
-        {%- set href = href ~ fileId -%}
+    {%- set sizes = (size is not empty) ? size ~ 'x' ~ size : '' -%}
+    {%- if icon.enabled -%}
+        {%- set href = general.base_path ~ ((general.base_path ends with '/') ? '' : '/') ~ ((fileId is not empty) ? fileId : general.file_id) -%}
         {%- if fileId != 'manifest' -%}
             {%- set href = href ~ ((size is not empty) ? '-' ~ size ~ '.png' : '.ico') -%}
+            {%- set hrefC = icon.image -%}
         {%- else -%}
             {%- set href = href ~ ".json" -%}
+            {%- set hrefC = icon.path -%}
         {%- endif -%}
-        {%- if mode == 'manual' or (mode == 'semi-auto' and hrefC is not empty) -%}
+        {%- if general.mode == 'manual' or (general.mode == 'semi-auto' and hrefC is not empty) -%}
             {%- set href = hrefC -%}
         {%- endif -%}
         {%- if href is not empty -%}
-            {{ SELF.renderLinkTag(enabled, rel, type, sizes, href) }}
+            {{ SELF.renderLinkTag(icon.enabled, icon.rel, type, sizes, href) }}
         {%- endif -%}
     {%- endif -%}
 {%- endmacro -%}

@@ -12,7 +12,7 @@
 #######################################################
 
 name: Favicon Generator
-description: Configure Favicon Generator Atom.
+description: Renders Favicon Tags to the HTML head.
 type: atom
 
 form:

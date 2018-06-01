@@ -17,39 +17,35 @@
 {%- block head -%}
     {{ parent() }}
     {%- if general.mode != 'custom' -%}
-        {{- _self.renderLinkTagMode(general, particle.icon, "image/x-icon", "","") -}}
-        {{- _self.renderLinkTagMode(general, particle.icon57, "57", "", "") -}}
-        {{- _self.renderLinkTagMode(general, particle.icon60, "60", "", "") -}}
-        {{- _self.renderLinkTagMode(general, particle.icon72, "72", "", "") -}}
-        {{- _self.renderLinkTagMode(general, particle.icon76, "76", "", "") -}}
-        {{- _self.renderLinkTagMode(general, particle.icon114, "114", "", "") -}}
-        {{- _self.renderLinkTagMode(general, particle.icon120, "120", "", "") -}}
-        {{- _self.renderLinkTagMode(general, particle.icon144, "144", "", "") -}}
-        {{- _self.renderLinkTagMode(general, particle.icon152, "152", "", "") -}}
-        {{- _self.renderLinkTagMode(general, particle.icon180, "180", "", "") -}}
-        
-        {{- _self.renderLinkTagMode(general, particle.icon16, "16", "image/png", "") -}}
-        {{- _self.renderLinkTagMode(general, particle.icon32, "32", "image/png", "") -}}
-        {{- _self.renderLinkTagMode(general, particle.icon36, "36", "image/png", "") -}}
-        {{- _self.renderLinkTagMode(general, particle.icon48, "48", "image/png", "") -}}
-        {{- _self.renderLinkTagMode(general, particle.icon96, "96", "image/png", "") -}}
-        {{- _self.renderLinkTagMode(general, particle.icon128, "128", "image/png", "") -}}
-        {{- _self.renderLinkTagMode(general, particle.icon192, "192", "image/png", "") }}
-        {{- _self.renderLinkTagMode(general, particle.icon196, "196", "image/png", "") }}
-        {{- _self.renderLinkTagMode(general, particle.manifest, "", "", "manifest") -}}
-        
-        
-        {{- _self.renderMetaTagMode(general, particle.icon144tile, "144", "msapplication-TileImage", 0) -}}
-        {{- _self.renderMetaTagMode(general, particle.icon70square, "70", "msapplication-square70x70logo", 0) -}}
-        {{- _self.renderMetaTagMode(general, particle.icon150square, "150", "msapplication-square150x150logo", 0) -}}
-        {{- _self.renderMetaTagMode(general, particle.icon310square, "310", "msapplication-square310x310logo", 0) -}}
-        
-        {{- _self.renderMetaTag(general, particle.tilecolor, particle.tilecolor.color, "msapplication-TileColor", 1) -}}
-        {{- _self.renderMetaTag(general, particle.themecolor, particle.themecolor.color, "theme-color", 1) -}}
+    {{ _self.renderLinkTagMode(general, particle.icon, "image/x-icon", "","") }}
+    {{ _self.renderLinkTagMode(general, particle.icon57, "57", "", "") }}
+    {{ _self.renderLinkTagMode(general, particle.icon60, "60", "", "") }}
+    {{ _self.renderLinkTagMode(general, particle.icon72, "72", "", "") }}
+    {{ _self.renderLinkTagMode(general, particle.icon76, "76", "", "") }}
+    {{ _self.renderLinkTagMode(general, particle.icon114, "114", "", "") }}
+    {{ _self.renderLinkTagMode(general, particle.icon120, "120", "", "") }}
+    {{ _self.renderLinkTagMode(general, particle.icon144, "144", "", "") }}
+    {{ _self.renderLinkTagMode(general, particle.icon152, "152", "", "") }}
+    {{ _self.renderLinkTagMode(general, particle.icon180, "180", "", "") }}
+    {{ _self.renderLinkTagMode(general, particle.icon16, "16", "image/png", "") }}
+    {{ _self.renderLinkTagMode(general, particle.icon32, "32", "image/png", "") }}
+    {{ _self.renderLinkTagMode(general, particle.icon36, "36", "image/png", "") }}
+    {{ _self.renderLinkTagMode(general, particle.icon48, "48", "image/png", "") }}
+    {{ _self.renderLinkTagMode(general, particle.icon96, "96", "image/png", "") }}
+    {{ _self.renderLinkTagMode(general, particle.icon128, "128", "image/png", "") }}
+    {{ _self.renderLinkTagMode(general, particle.icon192, "192", "image/png", "") }}
+    {{ _self.renderLinkTagMode(general, particle.icon196, "196", "image/png", "") }}
+    {{ _self.renderLinkTagMode(general, particle.manifest, "", "", "manifest") }}
+    {{ _self.renderMetaTagMode(general, particle.icon144tile, "144", "msapplication-TileImage", 0) }}
+    {{ _self.renderMetaTagMode(general, particle.icon70square, "70", "msapplication-square70x70logo", 0) -}}
+    {{ _self.renderMetaTagMode(general, particle.icon150square, "150", "msapplication-square150x150logo", 0) }}
+    {{ _self.renderMetaTagMode(general, particle.icon310square, "310", "msapplication-square310x310logo", 0) }}
+    {{ _self.renderMetaTag(general, particle.tilecolor, particle.tilecolor.color, "msapplication-TileColor", 1) }}
+    {{ _self.renderMetaTag(general, particle.themecolor, particle.themecolor.color, "theme-color", 1) }}
     {%- endif -%}
     
     {%- for cTag in particle.custom.tags -%}
-        {{- _self.renderLinkTag(cTag.enabled, cTag.rel, cTag.type, cTag.sizes, cTag.image) -}}
+    {{ _self.renderLinkTag(cTag.enabled, cTag.rel, cTag.type, cTag.sizes, cTag.image) }}
     {%- endfor -%}
 {%- endblock -%}
 

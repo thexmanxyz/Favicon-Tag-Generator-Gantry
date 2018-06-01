@@ -89,39 +89,37 @@
 {%- macro renderIconTags(assets) -%}
     {%- import _self as SELF -%}
     {%- set general = assets.general -%}
+    
     {%- if general.mode != 'custom' -%}
-        {{- SELF.renderLinkTagMode(general, assets.icon, "", "image/x-icon", "") -}}
-        {{- SELF.renderLinkTagMode(general, assets.icon57, "57", "", "") -}}
-        {{- SELF.renderLinkTagMode(general, assets.icon60, "60", "", "") -}}
-        {{- SELF.renderLinkTagMode(general, assets.icon72, "72", "", "") -}}
-        {{- SELF.renderLinkTagMode(general, assets.icon76, "76", "", "") -}}
-        {{- SELF.renderLinkTagMode(general, assets.icon114, "114", "", "") -}}
-        {{- SELF.renderLinkTagMode(general, assets.icon120, "120", "", "") -}}
-        {{- SELF.renderLinkTagMode(general, assets.icon144, "144", "", "") -}}
-        {{- SELF.renderLinkTagMode(general, assets.icon152, "152", "", "") -}}
-        {{- SELF.renderLinkTagMode(general, assets.icon180, "180", "", "") -}}
-        
-        {{- SELF.renderLinkTagMode(general, assets.icon16, "16", "image/png", "") -}}
-        {{- SELF.renderLinkTagMode(general, assets.icon32, "32", "image/png", "") -}}
-        {{- SELF.renderLinkTagMode(general, assets.icon36, "36", "image/png", "") -}}
-        {{- SELF.renderLinkTagMode(general, assets.icon48, "48", "image/png", "") -}}
-        {{- SELF.renderLinkTagMode(general, assets.icon96, "96", "image/png", "") -}}
-        {{- SELF.renderLinkTagMode(general, assets.icon128, "128", "image/png", "") -}}
-        {{- SELF.renderLinkTagMode(general, assets.icon192, "192", "image/png", "") }}
-        {{- SELF.renderLinkTagMode(general, assets.icon196, "196", "image/png", "") }}
-        {{- SELF.renderLinkTagMode(general, assets.manifest, "", "", "manifest") -}}
-        
-        {{- SELF.renderMetaTagMode(general, assets.icon144tile, "144", "msapplication-TileImage", 0) -}}
-        {{- SELF.renderMetaTagMode(general, assets.icon70square, "70", "msapplication-square70x70logo", 0) -}}
-        {{- SELF.renderMetaTagMode(general, assets.icon150square, "150", "msapplication-square150x150logo", 0) -}}
-        {{- SELF.renderMetaTagMode(general, assets.icon310square, "310", "msapplication-square310x310logo", 0) -}}
-        
-        {{- SELF.renderMetaTagMode(general, assets.tilecolor, assets.tilecolor.color, "msapplication-TileColor", 1) -}}
-        {{- SELF.renderMetaTagMode(general, assets.themecolor, assets.themecolor.color, "theme-color", 1) -}}
+    {{ SELF.renderLinkTagMode(general, assets.icon, "", "image/x-icon", "") }}
+    {{ SELF.renderLinkTagMode(general, assets.icon57, "57", "", "") }}
+    {{ SELF.renderLinkTagMode(general, assets.icon60, "60", "", "") }}
+    {{ SELF.renderLinkTagMode(general, assets.icon72, "72", "", "") }}
+    {{ SELF.renderLinkTagMode(general, assets.icon76, "76", "", "") }}
+    {{ SELF.renderLinkTagMode(general, assets.icon114, "114", "", "") }}
+    {{ SELF.renderLinkTagMode(general, assets.icon120, "120", "", "") }}
+    {{ SELF.renderLinkTagMode(general, assets.icon144, "144", "", "") }}
+    {{ SELF.renderLinkTagMode(general, assets.icon152, "152", "", "") }}
+    {{ SELF.renderLinkTagMode(general, assets.icon180, "180", "", "") }}
+    {{ SELF.renderLinkTagMode(general, assets.icon16, "16", "image/png", "") }}
+    {{ SELF.renderLinkTagMode(general, assets.icon32, "32", "image/png", "") }}
+    {{ SELF.renderLinkTagMode(general, assets.icon36, "36", "image/png", "") }}
+    {{ SELF.renderLinkTagMode(general, assets.icon48, "48", "image/png", "") }}
+    {{ SELF.renderLinkTagMode(general, assets.icon96, "96", "image/png", "") }}
+    {{ SELF.renderLinkTagMode(general, assets.icon128, "128", "image/png", "") }}
+    {{ SELF.renderLinkTagMode(general, assets.icon192, "192", "image/png", "") }}
+    {{ SELF.renderLinkTagMode(general, assets.icon196, "196", "image/png", "") }}
+    {{ SELF.renderLinkTagMode(general, assets.manifest, "", "", "manifest") }}
+    {{ SELF.renderMetaTagMode(general, assets.icon144tile, "144", "msapplication-TileImage", 0) }}
+    {{ SELF.renderMetaTagMode(general, assets.icon70square, "70", "msapplication-square70x70logo", 0) }}
+    {{ SELF.renderMetaTagMode(general, assets.icon150square, "150", "msapplication-square150x150logo", 0) }}
+    {{ SELF.renderMetaTagMode(general, assets.icon310square, "310", "msapplication-square310x310logo", 0) }}
+    {{ SELF.renderMetaTagMode(general, assets.tilecolor, assets.tilecolor.color, "msapplication-TileColor", 1) }}
+    {{ SELF.renderMetaTagMode(general, assets.themecolor, assets.themecolor.color, "theme-color", 1) }}
     {%- endif -%}
 
     {%- for cTag in assets.custom.tags -%}
-        {{- SELF.renderLinkTag(cTag.enabled, cTag.rel, cTag.type, cTag.sizes, cTag.image) -}}
+    {{ SELF.renderLinkTag(cTag.enabled, cTag.rel, cTag.type, cTag.sizes, cTag.image) }}
     {%- endfor -%}
 {%- endmacro -%}
 

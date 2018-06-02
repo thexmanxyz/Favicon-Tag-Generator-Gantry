@@ -12,7 +12,8 @@
         <![CDATA[<div class="alert alert-info" role="alert"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
         <h3>Favicon Tag Generator - Extension for Gantry Framework</h3>
         <span aria-hidden="true" class="icon-user"></span>&nbsp;<em>Andreas Kar (andreas.kar@gmx.at)</em>
-        <p><b>NOTA</b>:&nbsp;L'estensione viene installata nel template Gantry Hydrogen.<br />Se si desidera installare su un template Gantry diverso, bisogna copiare manualmente i due file <code>assets.yaml</code> in <code>/templates/[NOME-TEMPLATE]/custom/engine/templatescustom/engine/blueprints/page</code> e <code>page_head.html.twig</code> in <code>/templates/[NOME-TEMPLATE]/custom/engine/templates</code>.</p></div>]]>
+        <p><b>NOTA</b>:&nbsp;L'estensione viene installata per Gantry Hydrogen.<br />Se si desidera installare su un template Gantry diversoSe si desidera installare su un template Gantry diverso, bisogna posizionare i file come segue:</p>
+		<ul><li><code>*.yaml</code> =&gt; <code>/templates/[TEMPLATE]/custom/engine/blueprints/page</code></li><li><code>*.twig</code> =&gt; <code>/templates/[TEMPLATE]/custom/engine/templates</code></li></ul></div>]]>
     </description>
     <fileset>
         <files folder="particles" target="templates/g5_hydrogen/custom/engine/blueprints/page">

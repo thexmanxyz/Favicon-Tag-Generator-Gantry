@@ -38,5 +38,6 @@ set pkg_def_enable=1
 set pkg_leg_enable=1
 set pkg_helium_enable=1
 set pkg_hydro_enable=1
+set pkg_global_enable=0
 
 "base-build.bat"

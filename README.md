@@ -37,7 +37,7 @@ ___
    * `page_head.html.twig` file to `/[GANTRY_THEME]/custom/engine/templates` and the 
    * `assets.yaml` file to `/[GANTRY_THEME]/custom/engine/blueprints/page`.
    
-   Please check the list below to determine where the template folder for your CMS is located.
+Please check the list below to determine where the template folder for your CMS is located.
 
 ## CMS Template Folder
 Please be aware that the template folder path varies in dependence of the used CMS. Here is a list of the folders for the different platforms:

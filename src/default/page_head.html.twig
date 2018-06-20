@@ -132,14 +132,14 @@
             {%- set href = href ~ ((size is not empty) ? '-' ~ size ~ '.png' : '.ico') -%}
             {%- set hrefC = icon.image -%}
         {%- else -%}
-            {%- set href = href ~ ".json" -%}
+            {%- set href = href ~ ".webmanifest" -%}
             {%- set hrefC = icon.path -%}
         {%- endif -%}
         {%- if general.mode == 'manual' or (general.mode == 'semi-auto' and hrefC is not empty) -%}
             {%- set href = hrefC -%}
         {%- endif -%}
         {%- if href is not empty -%}
-            {{ SELF.renderLinkTag(icon.enabled, icon.rel, type, sizes, href) }}
+            {{ SELF.renderLinkTag(icon.enabled, icon.rel, type, sizes, href, general.apple_sizes) }}
         {%- endif -%}
     {%- endif -%}
 {%- endmacro -%}
@@ -158,13 +158,13 @@
     {%- endif -%}
 {%- endmacro -%}
 
-{%- macro renderLinkTag(enabled, rel, type, sizes, href) -%}
+{%- macro renderLinkTag(enabled, rel, type, sizes, href, appleSizes) -%}
     {%- if enabled -%}
         {%- set linkTag = '<link rel="' ~ rel|e ~ '"' -%}
         {%- if type is not empty -%}
             {%- set linkTag = linkTag ~ ' type="' ~ type|e ~ '"' -%}
         {%- endif -%}
-        {%- if sizes is not empty -%}
+        {%- if sizes is not empty and ((rel == 'icon') or (rel starts with 'apple-touch' and appleSizes)) -%}
             {%- set linkTag = linkTag ~ ' sizes="' ~ sizes|e ~ '"' -%}
         {%- endif -%}
         {%- if href is not empty -%}

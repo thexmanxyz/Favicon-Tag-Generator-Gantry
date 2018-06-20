@@ -57,6 +57,12 @@ form:
           description: The image file identifier. The files have to be named e.g.: favicon.ico, favicon-16.png, favicon-32.png
           default: favicon
 
+        general.apple_sizes:
+          type: input.checkbox
+          label: Enable Apple Sizes
+          description: Defines whether the 'sizes=' attribute will be rendered for Apple touch icons.
+          default: 0
+
     set_icons1:
       type: container.set
       label: Icons (1)

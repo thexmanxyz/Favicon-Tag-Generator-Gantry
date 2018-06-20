@@ -18,7 +18,7 @@ set scr_log_files=0
 
 REM --- Project Variables ---
 set prj_id=ftg
-set prj_rev=v1.1.1
+set prj_rev=v1.1.2
 set prj_name=favicon-tag-generator
 set prj_fullname=Favicon Tag Generator - Extension
 set prj_title_hr=-------------------------------------

@@ -58,6 +58,12 @@ form:
                   description: Der Identifier für die Bilder. Die Icon Dateien müssen wie folgt benannt werden z.B.: favicon.ico, favicon-16.png, favicon-32.png
                   default: favicon
 
+                general.apple_sizes:
+                  type: input.checkbox
+                  label: Aktiviere Apple Sizes
+                  description: Legt fest, ob das 'sizes=' Attribut für Apple Touch Icons gerendert werden soll.
+                  default: 0
+
         tab_icons1:
             label: Icons (1)
             fields:

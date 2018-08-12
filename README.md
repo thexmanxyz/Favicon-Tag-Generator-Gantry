@@ -9,7 +9,7 @@ This project contains a Gantry Extension and improves the Favicon as well as the
 * Gantry Templating Framework and Theme
 
 ## Download
-Choose the correct download for your target platform. Joomla Plugin System supported for the Gantry themes Helium or Hydrogen. The latest Extension version is **v1.1.2**.
+Choose the correct download for your target platform. Joomla Plugin System supported for the Gantry themes Helium and Hydrogen. The latest Extension version is **v1.1.2**.
 
 **Attention:** This is an extension of the Gantry core functionality. Hence, the installation overrides (not overwrites) core files of the Gantry Framework. On install you don't lose anything, but changes on the framework might not be propagated until the extension is removed / uninstalled.
 ___

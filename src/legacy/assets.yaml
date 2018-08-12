@@ -29,7 +29,7 @@ form:
         general.info:
           type: separator.note
           class: alert alert-info
-          content: In Automatic or Semi-Automatic Mode please define the Image Identifier and name your files appropriate e.g.: favicon.icon, favicon-16.png, favicon-32.png. In all automaic modes images are limitied to the files types .png and .ico.
+          content: In Automatic or Semi-Automatic Mode please define the Image Identifier and name your files appropriate e.g.: favicon.ico, favicon-16.png, favicon-32.png. In all automaic modes images are limitied to the files types .png and .ico.
 
         general.mode:
           type: select.select
@@ -42,6 +42,7 @@ form:
               semi-auto: Semi-Automatic
               manual: Manual
               custom: Custom Only
+              disabled: Disabled
 
         general.base_path:
           type: input.text
@@ -710,6 +711,46 @@ form:
           description: Select the image for the link tag.
           filter: '.png$'
 
+        icon310x150wide.info:
+          type: separator.note
+          class: alert alert-info
+          content: Favicon - 310x150px - MS Square
+
+        icon310x150wide.enabled:
+          type: input.checkbox
+          label: Enabled
+          description: Defines whether the icon link tag (310x150px) should be generated.
+          default: 1
+
+        icon310x150wide.image:
+          type: input.imagepicker
+          label: Image (.png)
+          description: Select the image for the link tag.
+          filter: '.png$'
+
+        iconSafari.info:
+         type: separator.note
+         class: alert alert-info
+         content: Safari - Mask Icon - SVG
+
+        iconSafari.enabled:
+         type: input.checkbox
+         label: Enabled
+         description: Defines whether the icon link tag (Mask Icon - SVG) should be generated.
+         default: 1       
+
+        iconSafari.image:
+         type: input.imagepicker
+         label: Image (.svg)
+         description: Select the image for the link tag.
+         filter: '.svg$'
+
+        iconSafari.color:
+         type: input.colorpicker
+         label: Color
+         description: Select the color for the link tag.
+         default: "#ffffff"
+
     set_custom:
       type: container.set
       label: Custom
@@ -734,6 +775,12 @@ form:
               description: Select the image for the link tag.
               filter: '.png$'
 
+            .color:
+              type: input.colorpicker
+              label: Color
+              description: Select the color for the link tag.
+              default: "#ffffff"
+  
             .sizes:
               type: input.text
               label: Sizes

@@ -8,6 +8,11 @@ This project contains a Gantry Extension and improves the Favicon as well as the
 * CMS (Joomla, Wordpress, Grav)
 * Gantry Templating Framework and Theme
 
+## Deprecation
+* This project might get abandoned in the future because Gantry now supports `<head>` access over Atoms / Particles [#2303](https://github.com/gantry/gantry5/issues/2303).
+* This extension will be completely replaced by the [Favicon Tag Generator Atom](https://github.com/thexmanxyz/Favicon-Tag-Generator-Atom-Gantry) somewhere in the future.
+* Currently both project support the same functionality and are on the same update level.
+
 ## Download
 Choose the correct download for your target platform. Joomla Plugin System supported for the Gantry themes Helium and Hydrogen. The latest Extension version is **v1.1.2**.
 
@@ -65,8 +70,8 @@ Please be aware that the template folder path varies in dependence of the used C
   * Manifest File
   * Tile Color
   * Theme Color
-  * MS Square
-  * MS TileImage
+  * MS Square, MS Wide and MS TileImage
+  * Safari Mark Icon
  * Custom Tag Generation for new appearing Icon Sizes
 
 ## Showroom

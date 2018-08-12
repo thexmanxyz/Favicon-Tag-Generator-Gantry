@@ -32,7 +32,7 @@ form:
                 general.info:
                   type: separator.note
                   class: alert alert-info
-                  content: Im Automatisch sowie Semi-Automatischen Modus beachten Sie bitte, dass Ihre Dateien korrekt benannt wurden. z.B.: favicon.icon, favicon-16.png, favicon-32.png. In allen automatischen Modi sind die Bilddateien limitiert auf die Dateiendungen .png und .ico.
+                  content: Im Automatisch sowie Semi-Automatischen Modus beachten Sie bitte, dass Ihre Dateien korrekt benannt wurden. z.B.: favicon.ico, favicon-16.png, favicon-32.png. In allen automatischen Modi sind die Bilddateien limitiert auf die Dateiendungen .png und .ico.
                 general.mode:
                   type: select.select
                   label: Modus
@@ -44,6 +44,7 @@ form:
                       semi-auto: Semi-Automatisch
                       manual: Manuell
                       custom: Benutzerdefiniert
+                      disabled: Deaktiviert
 
                 general.base_path:
                   type: input.text
@@ -709,6 +710,46 @@ form:
                   description: Wählen Sie ein Bild für den Link Tag.
                   filter: '.png$'
 
+                icon310x150wide.info:
+                  type: separator.note
+                  class: alert alert-info
+                  content: Favicon - 310x150px - MS Wide
+
+                icon310x150wide.enabled:
+                  type: input.checkbox
+                  label: Aktiviert
+                  description: Legt fest ob der Link Tag (310x150px) generiert werden soll.
+                  default: 1
+
+                icon310x150wide.image:
+                  type: input.imagepicker
+                  label: Bild (.png)
+                  description: Wählen Sie ein Bild für den Link Tag.
+                  filter: '.png$'
+
+                iconSafari.info:
+                  type: separator.note
+                  class: alert alert-info
+                  content: Safari - Mask Icon - SVG
+
+                iconSafari.enabled:
+                  type: input.checkbox
+                  label: Aktiviert
+                  description: Legt fest ob der Link Tag (Mask Icon - SVG) generiert werden soll.
+                  default: 1       
+
+                iconSafari.image:
+                  type: input.imagepicker
+                  label: Bild (.svg)
+                  description: Wählen Sie ein Bild für den Link Tag.
+                  filter: '.svg$'
+
+                iconSafari.color:
+                  type: input.colorpicker
+                  label: Farbe
+                  description: Wählen Sie den Farbcode für den Link Tag.
+                  default: "#ffffff"
+
         tab_custom:
             label: Benutzerdefiniert
             fields:
@@ -731,6 +772,12 @@ form:
                       label: Bild
                       description: Wählen Sie ein Bild für den Link Tag.
                       filter: '.png$'
+
+                    .color:
+                      type: input.colorpicker
+                      label: Farbe
+                      description: Wählen Sie den Farbcode für den Link Tag.
+                      default: "#ffffff"
 
                     .sizes:
                       type: input.text

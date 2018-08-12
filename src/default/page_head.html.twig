@@ -93,56 +93,66 @@
     {%- import _self as SELF -%}
     {%- set general = assets.general -%}
     
-    {%- if general.mode != 'custom' -%}
-    {{ SELF.renderLinkTagMode(general, assets.icon, "", "image/x-icon", "") }}
-    {{ SELF.renderLinkTagMode(general, assets.icon57, "57", "", "") }}
-    {{ SELF.renderLinkTagMode(general, assets.icon60, "60", "", "") }}
-    {{ SELF.renderLinkTagMode(general, assets.icon72, "72", "", "") }}
-    {{ SELF.renderLinkTagMode(general, assets.icon76, "76", "", "") }}
-    {{ SELF.renderLinkTagMode(general, assets.icon114, "114", "", "") }}
-    {{ SELF.renderLinkTagMode(general, assets.icon120, "120", "", "") }}
-    {{ SELF.renderLinkTagMode(general, assets.icon144, "144", "", "") }}
-    {{ SELF.renderLinkTagMode(general, assets.icon152, "152", "", "") }}
-    {{ SELF.renderLinkTagMode(general, assets.icon180, "180", "", "") }}
-    {{ SELF.renderLinkTagMode(general, assets.icon16, "16", "image/png", "") }}
-    {{ SELF.renderLinkTagMode(general, assets.icon32, "32", "image/png", "") }}
-    {{ SELF.renderLinkTagMode(general, assets.icon36, "36", "image/png", "") }}
-    {{ SELF.renderLinkTagMode(general, assets.icon48, "48", "image/png", "") }}
-    {{ SELF.renderLinkTagMode(general, assets.icon96, "96", "image/png", "") }}
-    {{ SELF.renderLinkTagMode(general, assets.icon128, "128", "image/png", "") }}
-    {{ SELF.renderLinkTagMode(general, assets.icon192, "192", "image/png", "") }}
-    {{ SELF.renderLinkTagMode(general, assets.icon196, "196", "image/png", "") }}
-    {{ SELF.renderLinkTagMode(general, assets.manifest, "", "", "manifest") }}
-    {{ SELF.renderMetaTagMode(general, assets.icon144tile, "144", "msapplication-TileImage", 0) }}
-    {{ SELF.renderMetaTagMode(general, assets.icon70square, "70", "msapplication-square70x70logo", 0) }}
-    {{ SELF.renderMetaTagMode(general, assets.icon150square, "150", "msapplication-square150x150logo", 0) }}
-    {{ SELF.renderMetaTagMode(general, assets.icon310square, "310", "msapplication-square310x310logo", 0) }}
-    {{ SELF.renderMetaTagMode(general, assets.tilecolor, assets.tilecolor.color, "msapplication-TileColor", 1) }}
-    {{ SELF.renderMetaTagMode(general, assets.themecolor, assets.themecolor.color, "theme-color", 1) }}
-    {%- endif -%}
+	{%- if general.mode != 'disabled' -%}
+		{%- if general.mode != 'custom' -%}
+		{{ SELF.renderLinkTagMode(general, assets.icon, "", "image/x-icon", "", "") }}
+		{{ SELF.renderLinkTagMode(general, assets.icon57, "57", "", "", "") }}
+		{{ SELF.renderLinkTagMode(general, assets.icon60, "60", "", "", "") }}
+		{{ SELF.renderLinkTagMode(general, assets.icon72, "72", "", "", "") }}
+		{{ SELF.renderLinkTagMode(general, assets.icon76, "76", "", "", "") }}
+		{{ SELF.renderLinkTagMode(general, assets.icon114, "114", "", "", "") }}
+		{{ SELF.renderLinkTagMode(general, assets.icon120, "120", "", "", "") }}
+		{{ SELF.renderLinkTagMode(general, assets.icon144, "144", "", "", "") }}
+		{{ SELF.renderLinkTagMode(general, assets.icon152, "152", "", "", "") }}
+		{{ SELF.renderLinkTagMode(general, assets.icon180, "180", "", "", "") }}
+		{{ SELF.renderLinkTagMode(general, assets.icon16, "16", "image/png", "", "") }}
+		{{ SELF.renderLinkTagMode(general, assets.icon32, "32", "image/png", "", "") }}
+		{{ SELF.renderLinkTagMode(general, assets.icon36, "36", "image/png", "", "") }}
+		{{ SELF.renderLinkTagMode(general, assets.icon48, "48", "image/png", "", "") }}
+		{{ SELF.renderLinkTagMode(general, assets.icon96, "96", "image/png", "", "") }}
+		{{ SELF.renderLinkTagMode(general, assets.icon128, "128", "image/png", "", "") }}
+		{{ SELF.renderLinkTagMode(general, assets.icon192, "192", "image/png", "", "") }}
+		{{ SELF.renderLinkTagMode(general, assets.icon196, "196", "image/png", "", "") }}
+		{{ SELF.renderLinkTagMode(general, assets.manifest, "", "", "manifest", "") }}
+		{{ SELF.renderLinkTagMode(general, assets.iconSafari, "", "", "favicon", assets.iconSafari.color) }}
+		{{ SELF.renderMetaTagMode(general, assets.icon144tile, "144", "msapplication-TileImage", 0) }}
+		{{ SELF.renderMetaTagMode(general, assets.icon70square, "70", "msapplication-square70x70logo", 0) }}
+		{{ SELF.renderMetaTagMode(general, assets.icon150square, "150", "msapplication-square150x150logo", 0) }}
+		{{ SELF.renderMetaTagMode(general, assets.icon310square, "310", "msapplication-square310x310logo", 0) }}
+		{{ SELF.renderMetaTagMode(general, assets.icon310x150wide, "310x150", "msapplication-wide310x150logo", 0) }}
+		
+		{{ SELF.renderMetaTagMode(general, assets.tilecolor, assets.tilecolor.color, "msapplication-TileColor", 1) }}
+		{{ SELF.renderMetaTagMode(general, assets.themecolor, assets.themecolor.color, "theme-color", 1) }}
+		{%- endif -%}
 
-    {%- for cTag in assets.custom.tags -%}
-    {{ SELF.renderLinkTag(cTag.enabled, cTag.rel, cTag.type, cTag.sizes, cTag.image) }}
-    {%- endfor -%}
+		{%- for cTag in assets.custom.tags -%}
+		{{ SELF.renderLinkTag(cTag.enabled, cTag.rel, cTag.type, cTag.image, cTag.sizes, general.apple_sizes, cTag.color) }}
+		{%- endfor -%}
+	{%- endif -%}
 {%- endmacro -%}
 
-{%- macro renderLinkTagMode(general, icon, size, type, fileId) -%}
+{%- macro renderLinkTagMode(general, icon, size, type, fileId, color) -%}
     {%- import _self as SELF -%}
     {%- set sizes = (size is not empty) ? size ~ 'x' ~ size : '' -%}
+	{%- set rel = icon.rel -%}
     {%- if icon.enabled -%}
         {%- set href = general.base_path ~ ((general.base_path ends with '/') ? '' : '/') ~ ((fileId is not empty) ? fileId : general.file_id) -%}
-        {%- if fileId != 'manifest' -%}
-            {%- set href = href ~ ((size is not empty) ? '-' ~ size ~ '.png' : '.ico') -%}
-            {%- set hrefC = icon.image -%}
-        {%- else -%}
+        {%- if fileId == 'manifest' -%}
             {%- set href = href ~ ".webmanifest" -%}
             {%- set hrefC = icon.path -%}
+		{%- elseif fileId == 'favicon' -%}
+			{%- set href = href ~ ".svg" -%}
+            {%- set hrefC = icon.path -%}
+			{%- set rel = 'mask-icon' -%}
+        {%- else -%}
+            {%- set href = href ~ ((size is not empty) ? '-' ~ size ~ '.png' : '.ico') -%}
+            {%- set hrefC = icon.image -%}
         {%- endif -%}
         {%- if general.mode == 'manual' or (general.mode == 'semi-auto' and hrefC is not empty) -%}
             {%- set href = hrefC -%}
         {%- endif -%}
         {%- if href is not empty -%}
-            {{ SELF.renderLinkTag(icon.enabled, icon.rel, type, sizes, href, general.apple_sizes) }}
+            {{ SELF.renderLinkTag(icon.enabled, rel, type, href, sizes, general.apple_sizes, color) }}
         {%- endif -%}
     {%- endif -%}
 {%- endmacro -%}
@@ -161,7 +171,7 @@
     {%- endif -%}
 {%- endmacro -%}
 
-{%- macro renderLinkTag(enabled, rel, type, sizes, href, appleSizes) -%}
+{%- macro renderLinkTag(enabled, rel, type, href, sizes, appleSizes, color) -%}
     {%- if enabled -%}
         {%- set linkTag = '<link rel="' ~ rel|e ~ '"' -%}
         {%- if type is not empty -%}
@@ -173,6 +183,9 @@
         {%- if href is not empty -%}
             {%- set linkTag = linkTag ~ ' href="' ~ url(href) ~ '"' -%}
         {%- endif -%}
+		{%- if color is not empty -%}
+			 {%- set linkTag = linkTag ~ ' color="' ~ color ~ '"' -%}
+		{%- endif -%}
         {%- set linkTag = linkTag ~ '>' -%}
         {{- linkTag|raw -}}
     {% endif %}

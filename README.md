@@ -9,7 +9,7 @@ This project contains a Gantry Extension and improves the Favicon as well as the
 * Gantry Templating Framework and Theme
 
 ## Download
-Choose the correct download for your target platform. Joomla Plugin System supported for all Gantry themes globally and locally for Helium or Hydrogen. The latest Extension version is **v1.1.2**.
+Choose the correct download for your target platform. Joomla Plugin System supported for the Gantry themes Helium or Hydrogen. The latest Extension version is **v1.1.2**.
 
 **Attention:** This is an extension of the Gantry core functionality. Hence, the installation overrides (not overwrites) core files of the Gantry Framework. On install you don't lose anything, but changes on the framework might not be propagated until the extension is removed / uninstalled.
 ___
@@ -23,7 +23,7 @@ ___
 [English](https://github.com/thexmanxyz/Favicon-Tag-Generator-Gantry/releases/download/v1.1.2/ftg.j3.hydrogen.EN.v1.1.2.zip) / [German](https://github.com/thexmanxyz/Favicon-Tag-Generator-Gantry/releases/download/v1.1.2/ftg.j3.hydrogen.DE.v1.1.2.zip)
 
 **Joomla Plugin - Helium:**
-[English](https://github.com/thexmanxyz/Favicon-Tag-Generator-Gantry/releases/download/v1.1.2/ftg.j3.helium.EN.v1.1.2.zip) / [English](https://github.com/thexmanxyz/Favicon-Tag-Generator-Gantry/releases/download/v1.1.2/ftg.j3.helium.DE.v1.1.2.zip)
+[English](https://github.com/thexmanxyz/Favicon-Tag-Generator-Gantry/releases/download/v1.1.2/ftg.j3.helium.EN.v1.1.2.zip) / [German](https://github.com/thexmanxyz/Favicon-Tag-Generator-Gantry/releases/download/v1.1.2/ftg.j3.helium.DE.v1.1.2.zip)
 ___
 
 ## Automatic Installation (Joomla only)
@@ -95,10 +95,6 @@ Insight of the *Favicon Tag Generator - Gantry Extension* configuration:
 **Backend (6)** - *[Custom](/screenshots/backend_custom.png)*
 
 ![6](/screenshots/backend_custom.png)
-
-
-## Future Tasks
-* Finish the Atom located in the repository and replace the extension.
 
 ## Known Issues
 * Updates to the Gantry core files might be missing if `assets.yaml` or `page_head.html.twig` were changed during an Gantry update. In case of problems simply uninstall the extension.

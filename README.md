@@ -110,5 +110,5 @@ Insight of the *Favicon Tag Generator - Gantry Extension* configuration:
 ## Credits
 Thanks to the [Gantry](https://github.com/gantry) team for providing a modern templating framework.
 
-## by [thex](https://github.com/thexmanxyz)
+## by [thex](https://github.com/thexmanxyz) | [gantryprojects](https://gantryprojects.com)
 Copyright (c) 2018, free to use in personal and commercial software as per the [license](/LICENSE.md).

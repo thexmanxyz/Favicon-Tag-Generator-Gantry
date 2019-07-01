@@ -14,21 +14,21 @@ This project contains a Gantry Extension and improves the Favicon as well as the
 * Currently both project support the same functionality and are on the same update level.
 
 ## Download
-Choose the correct download for your target platform. The Joomla Plugin System is supported locally for the Gantry themes Helium and Hydrogen. The latest Extension version is **v1.1.3**.
+Choose the correct download for your target platform. The Joomla Plugin System is supported locally for the Gantry themes Helium and Hydrogen. The latest Extension version is **v1.1.4**.
 
 **Attention:** This is an extension of the Gantry core functionality. Hence, the installation overrides (not overwrites) core files of the Gantry Framework. On install you don't lose anything, but changes on the framework might not be propagated until the extension is removed / uninstalled.
 ___
 **Default Extension:**
-[English](https://github.com/thexmanxyz/Favicon-Tag-Generator-Gantry/releases/download/v1.1.3/ftg.extension.only.EN.v1.1.3.zip) / [German](https://github.com/thexmanxyz/Favicon-Tag-Generator-Gantry/releases/download/v1.1.3/ftg.extension.only.DE.v1.1.3.zip)
+[English](https://github.com/thexmanxyz/Favicon-Tag-Generator-Gantry/releases/download/v1.1.4/ftg.extension.only.EN.v1.1.4.zip) / [German](https://github.com/thexmanxyz/Favicon-Tag-Generator-Gantry/releases/download/v1.1.4/ftg.extension.only.DE.v1.1.4.zip)
 
 **Legacy Extension - Gantry <5.3.2:**
-[English](https://github.com/thexmanxyz/Favicon-Tag-Generator-Gantry/releases/download/v1.1.3/ftg.extension.only.legacy.EN.v1.1.3.zip) / [German](https://github.com/thexmanxyz/Favicon-Tag-Generator-Gantry/releases/download/v1.1.3/ftg.extension.only.legacy.DE.v1.1.3.zip)
+[English](https://github.com/thexmanxyz/Favicon-Tag-Generator-Gantry/releases/download/v1.1.4/ftg.extension.only.legacy.EN.v1.1.4.zip) / [German](https://github.com/thexmanxyz/Favicon-Tag-Generator-Gantry/releases/download/v1.1.4/ftg.extension.only.legacy.DE.v1.1.4.zip)
 
 **Joomla Plugin - Hydrogen:**
-[English](https://github.com/thexmanxyz/Favicon-Tag-Generator-Gantry/releases/download/v1.1.3/ftg.j3.hydrogen.EN.v1.1.3.zip) / [German](https://github.com/thexmanxyz/Favicon-Tag-Generator-Gantry/releases/download/v1.1.3/ftg.j3.hydrogen.DE.v1.1.3.zip)
+[English](https://github.com/thexmanxyz/Favicon-Tag-Generator-Gantry/releases/download/v1.1.4/ftg.j3.hydrogen.EN.v1.1.4.zip) / [German](https://github.com/thexmanxyz/Favicon-Tag-Generator-Gantry/releases/download/v1.1.4/ftg.j3.hydrogen.DE.v1.1.4.zip)
 
 **Joomla Plugin - Helium:**
-[English](https://github.com/thexmanxyz/Favicon-Tag-Generator-Gantry/releases/download/v1.1.3/ftg.j3.helium.EN.v1.1.3.zip) / [German](https://github.com/thexmanxyz/Favicon-Tag-Generator-Gantry/releases/download/v1.1.3/ftg.j3.helium.DE.v1.1.3.zip)
+[English](https://github.com/thexmanxyz/Favicon-Tag-Generator-Gantry/releases/download/v1.1.4/ftg.j3.helium.EN.v1.1.4.zip) / [German](https://github.com/thexmanxyz/Favicon-Tag-Generator-Gantry/releases/download/v1.1.4/ftg.j3.helium.DE.v1.1.4.zip)
 ___
 
 ## Automatic Installation (Joomla only)
@@ -96,9 +96,13 @@ Insight of the *Favicon Tag Generator - Gantry Extension* configuration:
 
 ![5](/screenshots/backend_icon4.png)
 
-**Backend (6)** - *[Custom](/screenshots/backend_custom.png)*
+**Backend (6)** - *[Custom (1)](/screenshots/backend_custom_1.png)*
 
-![6](/screenshots/backend_custom.png)
+![6](/screenshots/backend_custom_1.png)
+
+**Backend (7)** - *[Custom (2)](/screenshots/backend_custom_2.png)*
+
+![7](/screenshots/backend_custom_2.png)
 
 ## Future Tasks
 - [ ] maintain future `<meta>` tags

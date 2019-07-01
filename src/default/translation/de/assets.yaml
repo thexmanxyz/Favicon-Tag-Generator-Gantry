@@ -61,7 +61,7 @@ form:
                   default: favicon
 
                 general.apple_sizes:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviere Apple Sizes
                   description: Legt fest, ob das 'sizes=' Attribut für Apple Touch Icons gerendert werden soll.
                   default: 0
@@ -75,7 +75,7 @@ form:
                   content: Standard Favicon Icon
 
                 icon.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviert
                   description: Legt fest ob der Link Tag (icon) generiert werden soll.
                   default: 1
@@ -103,7 +103,7 @@ form:
                   content: Favicon - 16x16px
 
                 icon16.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviert
                   description: Legt fest ob der Link Tag (16x16) generiert werden soll.
                   default: 1
@@ -131,7 +131,7 @@ form:
                   content: Favicon - 32x32px
 
                 icon32.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviert
                   description: Legt fest ob der Link Tag (32x32) generiert werden soll.
                   default: 1
@@ -159,7 +159,7 @@ form:
                   content: Favicon - 36x36px
 
                 icon36.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviert
                   description: Legt fest ob der Link Tag (36x36) generiert werden soll.
                   default: 1
@@ -187,7 +187,7 @@ form:
                   content: Favicon - 48x48px
 
                 icon48.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviert
                   description: Legt fest ob der Link Tag (48x48) generiert werden soll.
                   default: 1
@@ -215,7 +215,7 @@ form:
                   content: Favicon - 57x57px
 
                 icon57.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviert
                   description: Legt fest ob der Link Tag (57x57) generiert werden soll.
                   default: 1
@@ -243,7 +243,7 @@ form:
                   content: Favicon - 60x60px
 
                 icon60.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviert
                   description: Legt fest ob der Link Tag (60x60) generiert werden soll.
                   default: 1
@@ -271,7 +271,7 @@ form:
                   content: Favicon - 72x72px
 
                 icon72.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviert
                   description: Legt fest ob der Link Tag (72x72) generiert werden soll.
                   default: 1
@@ -303,7 +303,7 @@ form:
                   content: Favicon - 76x76px
 
                 icon76.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviert
                   description: Legt fest ob der Link Tag (76x76) generiert werden soll.
                   default: 1
@@ -331,7 +331,7 @@ form:
                   content: Favicon - 96x96px
 
                 icon96.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviert
                   description: Legt fest ob der Link Tag (96x96) generiert werden soll.
                   default: 1
@@ -359,7 +359,7 @@ form:
                   content: Favicon - 114x114px
 
                 icon114.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviert
                   description: Legt fest ob der Link Tag (114x114) generiert werden soll.
                   default: 1
@@ -387,7 +387,7 @@ form:
                   content: Favicon - 120x120px
 
                 icon120.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviert
                   description: Legt fest ob der Link Tag (120x120) generiert werden soll.
                   default: 1
@@ -415,7 +415,7 @@ form:
                   content: Favicon - 128x128px
 
                 icon128.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviert
                   description: Legt fest ob der Link Tag (128x128) generiert werden soll.
                   default: 1
@@ -443,7 +443,7 @@ form:
                   content: Favicon - 144x144px
 
                 icon144.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviert
                   description: Legt fest ob der Link Tag (144x144) generiert werden soll.
                   default: 1
@@ -471,7 +471,7 @@ form:
                   content: Favicon - 144x144px - MS TileImage
 
                 icon144tile.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviert
                   description: Legt fest ob der Link Tag (144x144px) generiert werden soll.
                   default: 1
@@ -491,7 +491,7 @@ form:
                   content: Favicon - 152x152px
 
                 icon152.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviert
                   description: Legt fest ob der Link Tag (152x152) generiert werden soll.
                   default: 1
@@ -519,7 +519,7 @@ form:
                   content: Favicon - 180x180px
 
                 icon180.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviert
                   description: Legt fest ob der Link Tag (180x180) generiert werden soll.
                   default: 1
@@ -547,7 +547,7 @@ form:
                   content: Favicon - 192x192px
 
                 icon192.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviert
                   description: Legt fest ob der Link Tag (192x192) generiert werden soll.
                   default: 1
@@ -575,7 +575,7 @@ form:
                   content: Favicon - 196x196px
 
                 icon196.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviert
                   description: Legt fest ob der Link Tag (196x196) generiert werden soll.
                   default: 1
@@ -603,7 +603,7 @@ form:
                   content: Manifest - File
 
                 manifest.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviert (Manifest)
                   description: Legt fest ob der Meta Manifest Tag generiert werden soll.
                   default: 0
@@ -630,7 +630,7 @@ form:
                   content: Tile Color
 
                 tilecolor.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviert (MS TileColor)
                   description: Legt fest ob der Meta MS TileColor Tag generiert werden soll.
                   default: 1
@@ -647,7 +647,7 @@ form:
                   content: Theme Color
 
                 themecolor.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviert (theme-color)
                   description: Legt fest ob der Meta 'theme-color' Tag generiert werden soll.
                   default: 1
@@ -667,7 +667,7 @@ form:
                   content: Favicon - 70x70px - MS Square
 
                 icon70square.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviert
                   description: Legt fest ob der Link Tag (70x70px) generiert werden soll.
                   default: 1
@@ -684,7 +684,7 @@ form:
                   content: Favicon - 150x150px - MS Square
 
                 icon150square.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviert
                   description: Legt fest ob der Link Tag (150x150px) generiert werden soll.
                   default: 1
@@ -701,7 +701,7 @@ form:
                   content: Favicon - 310x310px - MS Square
 
                 icon310square.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviert
                   description: Legt fest ob der Link Tag (310x310px) generiert werden soll.
                   default: 1
@@ -718,7 +718,7 @@ form:
                   content: Favicon - 310x150px - MS Wide
 
                 icon310x150wide.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviert
                   description: Legt fest ob der Link Tag (310x150px) generiert werden soll.
                   default: 1
@@ -735,7 +735,7 @@ form:
                   content: Safari - Mask Icon - SVG
 
                 iconSafari.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviert
                   description: Legt fest ob der Link Tag (Mask Icon - SVG) generiert werden soll.
                   default: 1       
@@ -764,7 +764,7 @@ form:
                   ajax: true
                   fields:
                     .enabled:
-                      type: input.checkbox
+                      type: enable.enable
                       label: Aktiviert
                       description: Legt fest ob der Link Tag generiert werden soll.
                       default: 1

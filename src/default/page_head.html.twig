@@ -18,7 +18,9 @@
 
 {% assets with { priority: 10 } %}
     {% block head_stylesheets -%}
-        <link rel="stylesheet" href="gantry-assets://css/font-awesome.min.css" type="text/css"/>
+        {% if gantry.config.page.fontawesome.enable|default(1) %}
+            <link rel="stylesheet" href="gantry-assets://css/font-awesome.min.css" type="text/css"/>
+        {% endif %}
         <link rel="stylesheet" href="gantry-engine://css-compiled/nucleus.css" type="text/css"/>
         {% for scss in gantry.theme.configuration.css.persistent|default(gantry.theme.configuration.css.files) %}
         <link rel="stylesheet" href="{{ scss }}.scss" type="text/css"/>
@@ -51,16 +53,6 @@
             {%- endfor -%}
         {%- endif -%}
         {{ gantry.document.getHtml('head_meta')|join("\n    ")|raw }}
-
-        {#% if gantry.config.page.assets.favicon %}
-        {#<link rel="icon" type="image/x-icon" href="{{ url(gantry.config.page.assets.favicon) }}" />#}
-        {#% endif %#}
-
-        {#% if gantry.config.page.assets.touchicon %#}
-        {#<link rel="apple-touch-icon" sizes="180x180" href="{{ url(gantry.config.page.assets.touchicon) }}">#}
-        {#<link rel="icon" sizes="192x192" href="{{ url(gantry.config.page.assets.touchicon) }}">#}
-        {#% endif %#}
-        
         {{- _self.renderIconTags(gantry.config.page.assets) -}}
     {% endblock %}
 
